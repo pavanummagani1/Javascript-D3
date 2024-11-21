@@ -6,13 +6,13 @@ class Car{
     enginecc;
     color;
     brand;
-    constructor(Engine,Power, Body, CC, Colour, Brand){
-        this.engine = Engine;
-        this.power = Power;
-        this.body = Body;
-        this.enginecc = CC;
-        this.color = Colour;
-        this.brand = Brand;
+    constructor(engine,power, body, engineCC, colour, brand){
+        this.engine = engine;
+        this.power = power;
+        this.body = body;
+        this.enginecc = engineCC;
+        this.color = colour;
+        this.brand = brand;
     }
     start(){
         console.log(this.brand,'Car is Started');
@@ -27,13 +27,13 @@ class Car{
         console.log(this.brand, "Car is Stopped");
     }
 }
-var XUV7OO = new Car("Diesel", "600bhp", "Metal", "2000cc", "Blue","Mahindra" );
+var xuv700= new Car("Diesel", "600bhp", "Metal", "2000cc", "Blue","Mahindra" );
 XUV7OO.start();
 XUV7OO.acceleration();
 XUV7OO.brake();
 XUV7OO.stop();
-console.log(XUV7OO.brand);
-console.log(XUV7OO.engine);
+console.log(xuv7OO.brand);
+console.log(xuv7OO.engine);
 
 
 console.log("_________________________________________________________________________________________________");
@@ -43,10 +43,10 @@ class Book{
     title;
     author;
     isbn;
-    constructor(Title, Author, Isbn){
-        this.title=Title;
-        this.author=Author;
-        this.isbn=Isbn;
+    constructor(bookTitle, bookAuthor, bookIsbn){
+        this.title=bookTitle;
+        this.author=bookAuthor;
+        this.isbn=bookIsbn;
     }
     checkOut(){
         console.log(this.title, "Book Borrowed by Someone");
@@ -83,14 +83,14 @@ class Product{
     name;
     price;
     category;
-    constructor(Name, Price, Category){
-        this.name=Name;
-        this.price = Price;
-        this.category = Category;
+    constructor(productName, productPrice, productCategory){
+        this.name=productName;
+        this.price = productPrice;
+        this.category = productCategory;
     }
-    applyDiscount(Amount){
+    applyDiscount(amount){
         // this.price=Amount
-        this.finalPrice = this.price-Amount;
+        this.finalPrice = this.price-amount;
     }
     getPriceAtferDiscount(){
         // console.log(finalPrice);
@@ -114,10 +114,10 @@ class Bank {
     accountholderName;
     accountNumber;
     accountBalance;
-    constructor(AccountHolderName, AccountNumber, AccountBalance){
-        this.accountholderName=AccountHolderName;
-        this.accountNumber=AccountNumber;
-        this.accountBalance=AccountBalance;
+    constructor(accountHolderName,accountNumber, accountBalance){
+        this.accountholderName=accountHolderName;
+        this.accountNumber=accountNumber;
+        this.accountBalance=accountBalance;
     }
     deposit(amount){
         this.accountBalance = this.accountBalance+amount;
@@ -147,11 +147,11 @@ class Vehicle{
     licenseplate;
     milage;
     fuel;
-    constructor(Model, Licenseplate, Milage,Fuel){
-        this.model=Model;
-        this.licenseplate = Licenseplate;
-        this.milage = Milage;
-        this.fuel=Fuel;
+    constructor(vehicleModel, vehicleLicenseplate, vehicleMilage,fuel){
+        this.model=vehicleModel;
+        this.licenseplate = vehicleLicenseplate;
+        this.milage = vehicleMilage;
+        this.fuel=fuel;
     }
     drive(miles){
         this.increasedMilage = miles/this.fuel;
@@ -175,9 +175,9 @@ console.log("___________________________________________________________________
 class Subject{
     name;
     grade;
-    constructor (studnetName, Grade){
+    constructor (studnetName, subjectGrade){
         this.name = studnetName;
-        this.grade = Grade;
+        this.grade = subjectGrade;
     }
     setGrade(newGrade){
         this.updatedGrade = newGrade;
